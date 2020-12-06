@@ -23,6 +23,10 @@ namespace Answer_Digital_Automation_test.Pages
         }
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/ul/li[21]/a")]
         private IWebElement ForAuthenticationLink;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/ul/li[26]/a")]
+        private IWebElement InfiniteScrollLink;
+
+
         public void Navigate(string url)
         {
             driver.Navigate().GoToUrl(url);
@@ -30,6 +34,10 @@ namespace Answer_Digital_Automation_test.Pages
         public void ClickAuthentication()
         {
             ForAuthenticationLink.Click();
+        }
+        public void ClickInfiniteScrollLink()
+        {
+            InfiniteScrollLink.Click();
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Answer_Digital_Automation_test
         TheInternetHome HomePage;
         TheInternetLogin LoginPage;
         LoggedIn LoggedInChecker;
+        InfiniteScroll infiniteScrollPage;
 
         [BeforeScenario]
         public void SetUp()
@@ -27,6 +28,7 @@ namespace Answer_Digital_Automation_test
             HomePage = new TheInternetHome(driver);
             LoginPage = new TheInternetLogin(driver);
             LoggedInChecker = new LoggedIn(driver);
+            infiniteScrollPage = new InfiniteScroll(driver);
         }
         [Given(@"I am on the correct site")]
         public void GivenOnCorrectSite()
@@ -94,6 +96,41 @@ namespace Answer_Digital_Automation_test
             StringAssert.Contains("Your username is invalid!", result);
 
         }
+
+
+
+
+
+
+
+
+        [Then(@"I click on Infinite Scroll")]
+        public void ClickOnInfiniteScroll()
+        {
+            HomePage.ClickInfiniteScrollLink();
+
+        }
+        [Then(@"I Scroll to the bottem of the page")]
+        public void ScrollDownPage()
+        {
+            //to wait for the page to load/ new text to load
+            Thread.Sleep(1482);
+            infiniteScrollPage.ScrollToBottem();
+
+        }
+        [Then(@"I Scroll to the Top of the page")]
+        public void ScrollUpPage()
+        {
+            Thread.Sleep(1482);
+            infiniteScrollPage.ScrollToTop();
+        }
+        [Then(@"I should see Infinite Scroll Text")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
 
 
         [AfterScenario]

@@ -84,12 +84,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Pages\InfiniteScroll.cs" />
     <Compile Include="Pages\LoggedIn.cs" />
     <Compile Include="Pages\TheInternetHome.cs" />
     <Compile Include="Pages\TheInternetLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\TestCaseTwo.feature" />
     <None Include="Features\TheInternetTest.feature" />
     <None Include="packages.config" />
   </ItemGroup>
