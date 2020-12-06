@@ -53,16 +53,20 @@ namespace Answer_Digital_Automation_test
         {
             LoginPage.PressLogin();
         }
-        [Then(@"I should see logged in")]
+        [Then(@"i log out")]
+        public void PressLogout()
+        {
+            LoggedInChecker.Loggout();
+        }
+        [Then(@"I should see i have logged out message")]
         public void CheckLoginPage()
         {
 
-            string result = LoggedInChecker.LoggedResult();
-            StringAssert.Contains("You logged into a secure area!", result);
+            string result = LoginPage.LoggedOutMessage();
+            StringAssert.Contains("You logged out of the secure area!", result);
             //   LoginPage.TypePassword("SuperSecretPassword!");
             // You logged into a secure area!
         }
-
         [Then(@"I type my Wrong username")]
         public void TypeWrongUsername()
         {

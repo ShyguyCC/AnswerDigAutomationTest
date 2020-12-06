@@ -23,4 +23,5 @@ Scenario: Correctly login to the internet.
 	And I type my correct username
 	And I type my correct password
 	And I Press Login
-	Then I should see logged in
+	And i log out
+	Then I should see i have logged out message

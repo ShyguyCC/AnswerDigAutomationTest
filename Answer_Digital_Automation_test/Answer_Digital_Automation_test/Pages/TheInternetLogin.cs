@@ -28,7 +28,9 @@ namespace Answer_Digital_Automation_test.Pages
         private IWebElement LoginButton;
         [FindsBy(How = How.XPath, Using = "html/body/div[1]/div/div")]
         private IWebElement FailedToLoginText;
-
+        [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div")]
+        private IWebElement LoggedOutText;
+        // You logged out of the secure area!
 
         public void TypeUsername(string name)
         {
@@ -45,6 +47,10 @@ namespace Answer_Digital_Automation_test.Pages
         public string FailedToLoginMessage()
         {
             return FailedToLoginText.Text;
+        }
+        public string LoggedOutMessage()
+        {
+            return LoggedOutText.Text;
         }
     }
 }
