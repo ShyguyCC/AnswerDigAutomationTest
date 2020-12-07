@@ -59,8 +59,14 @@ Utf8Json  version = 1.3.7
 # How to run tests on Visual Studio Community 2019
 
 First clone this git repository.
+
 Then open Answer_Digital_Automation_test.sln
+
 Build the project by clicking build -> build solution ont he menu
+
 Right click on the solution to restore NuGet packages
+
 Click on Test -> windows -> Test explorer to view the test window.
+
 Click on run all to run all the tests and then you will be able to select individual tests afterwards.
+
