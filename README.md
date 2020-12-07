@@ -68,5 +68,7 @@ Right click on the solution to restore NuGet packages
 
 Click on Test -> windows -> Test explorer to view the test window.
 
+Before trying to run tests, make sure your chrome is on Version 87.0.4280.88 as thats the selenium driver version used in this test 
+
 Click on run all to run all the tests and then you will be able to select individual tests afterwards.
 
