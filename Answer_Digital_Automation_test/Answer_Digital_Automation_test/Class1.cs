@@ -133,6 +133,82 @@ namespace Answer_Digital_Automation_test
 
 
 
+
+
+
+        [Then(@"I click on Key Presses")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+        [Then(@"I type the a key")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+        [Then(@"I check the a key has been typed")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+        [Then(@"I type the space key")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+        [Then(@"I check the space key has been typed")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+        [Then(@"I type the . key")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+        [Then(@"I check the . key has been typed")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+        [Then(@"I type the z key")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+        [Then(@"I check the z key has been typed")]
+        public void CheckInfiniteScrollText()
+        {
+            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         [AfterScenario]
         public void AfterScenario()
         {
