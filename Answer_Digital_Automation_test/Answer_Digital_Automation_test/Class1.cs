@@ -18,6 +18,7 @@ namespace Answer_Digital_Automation_test
         TheInternetLogin LoginPage;
         LoggedIn LoggedInChecker;
         InfiniteScroll infiniteScrollPage;
+        TypingPage TypePage;
 
         [BeforeScenario]
         public void SetUp()
@@ -29,6 +30,7 @@ namespace Answer_Digital_Automation_test
             LoginPage = new TheInternetLogin(driver);
             LoggedInChecker = new LoggedIn(driver);
             infiniteScrollPage = new InfiniteScroll(driver);
+            TypePage = new TypingPage(driver);
         }
         [Given(@"I am on the correct site")]
         public void GivenOnCorrectSite()
@@ -137,63 +139,59 @@ namespace Answer_Digital_Automation_test
 
 
         [Then(@"I click on Key Presses")]
-        public void CheckInfiniteScrollText()
+        public void ClickOnKeyPresses()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
+            HomePage.ClickKeyPresses();
 
         }
-
-        [Then(@"I type the a key")]
-        public void CheckInfiniteScrollText()
+        // dont know why there is no space between I and Type as it wouldnt work.
+        [Then(@"Itype the a key")]
+        public void TypeA()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            TypePage.TypeIn("a");
         }
 
-        [Then(@"I check the a key has been typed")]
-        public void CheckInfiniteScrollText()
+        [Then(@"Icheck the a key has been typed")]
+        public void CheckIfAPressed()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            string result = TypePage.CheckTyped();
+            StringAssert.Contains("You entered: a", result);
         }
 
         [Then(@"I type the space key")]
-        public void CheckInfiniteScrollText()
+        public void TypeSpace()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            TypePage.TypeIn(" ");
         }
 
         [Then(@"I check the space key has been typed")]
-        public void CheckInfiniteScrollText()
+        public void CheckIfSpacePressed()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            string result = TypePage.CheckTyped();
+            StringAssert.Contains("You entered: SPACE", result);
         }
 
         [Then(@"I type the . key")]
-        public void CheckInfiniteScrollText()
+        public void TypeDot()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            TypePage.TypeIn(".");
         }
         [Then(@"I check the . key has been typed")]
-        public void CheckInfiniteScrollText()
+        public void CheckDotPressed()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            string result = TypePage.CheckTyped();
+            StringAssert.Contains("You entered: PERIOD", result);
         }
-        [Then(@"I type the z key")]
-        public void CheckInfiniteScrollText()
+        [Then(@"Itype the z key")]
+        public void TypeZ()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            TypePage.TypeIn("Z");
         }
-        [Then(@"I check the z key has been typed")]
-        public void CheckInfiniteScrollText()
+        [Then(@"Icheck the z key has been typed")]
+        public void CheckZPressed()
         {
-            Assert.IsTrue(infiniteScrollPage.IsTextVisible());
-
+            string result = TypePage.CheckTyped();
+            StringAssert.Contains("You entered: Z", result);
         }
 
 

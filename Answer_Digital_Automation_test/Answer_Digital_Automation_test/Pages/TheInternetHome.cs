@@ -25,6 +25,10 @@ namespace Answer_Digital_Automation_test.Pages
         private IWebElement ForAuthenticationLink;
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/ul/li[26]/a")]
         private IWebElement InfiniteScrollLink;
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div/ul/li[31]/a")]
+        private IWebElement KeyPressesLink;
+
+
 
 
         public void Navigate(string url)
@@ -38,6 +42,10 @@ namespace Answer_Digital_Automation_test.Pages
         public void ClickInfiniteScrollLink()
         {
             InfiniteScrollLink.Click();
+        }
+        public void ClickKeyPresses()
+        {
+            KeyPressesLink.Click();
         }
     }
 }

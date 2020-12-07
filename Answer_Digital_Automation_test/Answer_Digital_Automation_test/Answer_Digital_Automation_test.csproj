@@ -88,9 +88,11 @@
     <Compile Include="Pages\LoggedIn.cs" />
     <Compile Include="Pages\TheInternetHome.cs" />
     <Compile Include="Pages\TheInternetLogin.cs" />
+    <Compile Include="Pages\TypingPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\TestCaseThree.feature" />
     <None Include="Features\TestCaseTwo.feature" />
     <None Include="Features\TheInternetTest.feature" />
     <None Include="packages.config" />
